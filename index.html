@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Company</title>
+    <title>E-Commerce Website</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -27,28 +27,32 @@
             color: white;
             text-decoration: none;
         }
-        .product {
+        .product-list {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
             padding: 20px;
+        }
+        .product-card {
             background-color: #fff;
-            margin-bottom: 20px;
-        }
-        .product img {
+            margin: 10px;
+            padding: 20px;
             width: 200px;
-            height: 200px;
-        }
-        .product-details {
             text-align: center;
         }
-        footer {
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+        .product-card h3 {
+            margin-top: 10px;
+        }
+        .product-card button {
             background-color: #333;
             color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
         }
         .form-container {
             background-color: #fff;
@@ -67,23 +71,34 @@
             margin-bottom: 10px;
             padding: 5px;
         }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>E-Commerce Company</h1>
+        <h1>E-Commerce Website</h1>
     </header>
     <nav>
         <a href="#">Home</a>
         <a href="#">Products</a>
+        <a href="#">Contact</a>
     </nav>
-    <div class="product">
-        <img src="product-image.jpg" alt="Product Image">
-        <div class="product-details">
-            <h2>Product Name</h2>
+    <div class="product-list">
+        <div class="product-card">
+            <img src="product-image.jpg" alt="Product Image">
+            <h3>Product Name</h3>
             <p>Product Description</p>
             <button>Add to Cart</button>
         </div>
+        <!-- Add more product cards as needed -->
     </div>
     <div class="form-container">
         <h2>Contact Us</h2>
@@ -95,7 +110,14 @@
         </form>
     </div>
     <footer>
-        &copy; 2023 E-Commerce Company. All rights reserved.
+        &copy; 2023 E-Commerce Website. All rights reserved.
     </footer>
+    <script>
+        // JavaScript for interactivity
+        document.querySelector('.product-card button').addEventListener('click', function() {
+            alert('Product added to cart!');
+        });
+    </script>
 </body>
 </html>
+
